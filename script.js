@@ -1,10 +1,7 @@
-const gridDiv = document.querySelector('.gridDiv');
-const grid = document.createAttribute('style')
+const container = document.querySelector('#container');
 
-grid.value = `
-    background-color: black;
-    width: 50px;
-    height: 50px;
-`;
-
-gridDiv.setAttributeNode(grid);
+for (let i = 0; i < 16 * 16; i++) {
+    const gridCell = document.createElement('div') ;
+    gridCell.classList.add('square');
+    container.appendChild(gridCell);
+}
